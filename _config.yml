@@ -1,0 +1,43 @@
+title: Reading Sounds
+tagline: "The Ultimate User's Guide to Closed Captioning"
+description: "A companion website for Reading Sounds: Closed-Captioned Media and Popular Culture by Sean Zdenek (University of Chicago Press, 2015)."
+email: seanzdenek@gmail.com
+url: "https://readingsounds.net"
+baseurl: ""
+author: Sean Zdenek
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalink structure — use slug directly so /chapter1/ etc. work
+permalink: /:slug/
+
+# Tell Jekyll where to find pages
+collections:
+  pages:
+    output: true
+    permalink: /:slug/
+
+# Minima theme settings
+minima:
+  skin: classic
+
+# Navigation
+header_pages:
+  - book-contents.html
+  - preface.html
+  - chapters.html
+  - blog.html
+  - fair-use-notice.html
+  - accessibility-statement.html
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
