@@ -6,8 +6,7 @@ url: "https://readingsounds.net"
 baseurl: ""
 author: Sean Zdenek
 
-# Build settings
-theme: minima
+# Build settings — no theme, fully custom layouts
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -22,18 +21,8 @@ collections:
     output: true
     permalink: /:slug/
 
-# Minima theme settings
-minima:
-  skin: classic
-
-# Navigation
-header_pages:
-  - book-contents.html
-  - preface.html
-  - chapters.html
-  - blog.html
-  - fair-use-notice.html
-  - accessibility-statement.html
+include:
+  - _pages
 
 exclude:
   - Gemfile
