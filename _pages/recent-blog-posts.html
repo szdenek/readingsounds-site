@@ -1,19 +1,18 @@
 ---
 layout: "page"
-title: "Recent Blog Posts"
+title: "Blog"
 slug: "recent-blog-posts"
 date: "2016-10-30"
 ---
 
-<ul>
- 	<li><a href="https://seanzdenek.com/2020/03/22/caption-every-screen/">Caption every screen</a> March 22, 2020</li>
- 	<li><a href="https://seanzdenek.com/2020/03/20/positioning-and-styling-captions-when-speakers-overlap-and-interrupt/">Positioning and styling captions when speakers overlap and interrupt each other</a> March 20, 2020</li>
- 	<li><a href="/cripping-closed-captioning-experiments-with-type-icons-and-dynamic-effects/">Cripping closed captioning: Experiments with type, icons, and dynamic effects</a> August 6, 2016</li>
- 	<li><a href="/captioning-bb-8-in-the-force-awakens/">Chirp! Captioning BB-8 in The Force Awakens</a> April 14, 2016</li>
- 	<li><a href="/do-sirens-always-wail/">Do sirens always wail?</a> January 7, 2016</li>
- 	<li><a href="/when-a-yellow-subtitle-meets-a-character-from-the-simpsons/">When a yellow subtitle meets a character from The Simpsons</a> December 18, 2015</li>
- 	<li><a href="/tracking-sonic-timelines-in-closed-captioning/">Tracking sonic timelines in closed captioning</a> October 18, 2015</li>
- 	<li><a href="/closed-captions-as-identity-markers/">Closed captions as identity markers (leitmotifs)</a> October 9, 2015</li>
- 	<li><a href="/subtitles-as-art/">Subtitles as visual art</a> October 8, 2015</li>
+<ul class="post-list">
+  {% for post in site.posts %}
+    {% assign s = post.slug | default: post.name %}
+    {% unless s contains 'chapter' or s == 'preface' %}
+    <li class="post-item">
+      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title | strip_html }}</a>
+    </li>
+    {% endunless %}
+  {% endfor %}
 </ul>
-For older blog posts, go to <a href="http://seanzdenek.com/">SeanZdenek.com</a>.

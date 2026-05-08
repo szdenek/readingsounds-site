@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Blog"
+description: "Blog posts about closed captioning, subtitles, and captioned media from Sean Zdenek."
+permalink: /blog/
+---
+
+<div class="wrapper">
+  <h1>Blog</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% assign s = post.slug | default: post.name %}
+      {% unless s contains 'chapter' or s == 'preface' %}
+      <li class="post-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%B %-d, %Y" }}</time>
+        <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title | strip_html }}</a>
+      </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</div>
