@@ -113,6 +113,43 @@ h1, h2, h3, h4 {
 }
 
 // -----------------------------------------------
+// Generic page layout
+// -----------------------------------------------
+.page-wrapper {
+  padding: 2.5rem 1.5rem;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin: 0 0 1.5rem;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 0.5rem;
+}
+
+.page-body {
+  p { margin: 0 0 1.2rem; }
+
+  blockquote {
+    border-left: 3px solid #ccc;
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+    color: #555;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  ul, ol { margin: 0 0 1.2rem; padding-left: 1.5rem; }
+  li { margin-bottom: 0.4rem; }
+}
+
+// -----------------------------------------------
 // Chapter pages
 // -----------------------------------------------
 .chapter-page {
