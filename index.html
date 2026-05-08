@@ -1,0 +1,36 @@
+---
+layout: default
+title: "Reading Sounds"
+description: "A companion website for Reading Sounds: Closed-Captioned Media and Popular Culture by Sean Zdenek (University of Chicago Press, 2015)."
+---
+
+<section class="home-hero">
+  <h1 class="home-hero-title">Reading Sounds</h1>
+  <p class="home-hero-sub">The Ultimate User's Guide to Closed Captioning</p>
+  <p class="home-hero-desc">A companion website for <em>Reading Sounds: Closed-Captioned Media and Popular Culture</em> by Sean Zdenek (University of Chicago Press, 2015).</p>
+</section>
+
+<div class="home-chapters">
+  <h2>Book chapters</h2>
+  <ul class="chapter-list">
+    <li><a href="{{ '/preface/' | relative_url }}">Preface</a></li>
+    <li><a href="{{ '/chapter1/' | relative_url }}">Chapter 1: A rhetorical view of captioning</a></li>
+    <li><a href="{{ '/chapter2/' | relative_url }}">Chapter 2: Reading and writing captions</a></li>
+    <li><a href="{{ '/chapter3/' | relative_url }}">Chapter 3: Context and subjectivity in sound effects captioning</a></li>
+    <li><a href="{{ '/chapter4/' | relative_url }}">Chapter 4: Logocentrism</a></li>
+    <li><a href="{{ '/chapter5/' | relative_url }}">Chapter 5: Captioned irony</a></li>
+    <li><a href="{{ '/chapter6/' | relative_url }}">Chapter 6: Captioned silences and ambient sounds</a></li>
+    <li><a href="{{ '/chapter7/' | relative_url }}">Chapter 7: Cultural literacy, sonic allusions, and series awareness</a></li>
+    <li><a href="{{ '/chapter8/' | relative_url }}">Chapter 8: In a manner of speaking</a></li>
+    <li><a href="{{ '/chapter9/' | relative_url }}">Chapter 9: The future of closed captioning</a></li>
+  </ul>
+
+  <h2 style="margin-top: 3rem;">Recent blog posts</h2>
+  <ul class="chapter-list">
+    {% for post in site.posts limit:6 %}
+      {% unless post.slug contains 'chapter' or post.slug == 'preface' %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title | strip_html }}</a></li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</div>
