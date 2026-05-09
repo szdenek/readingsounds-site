@@ -402,7 +402,10 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
     fetch(SUPABASE_URL + ‘/rest/v1/’ + TABLE + ‘?order=created_at.desc&limit=10’, {
       headers: headers()
     })
-    .then(function(r) { return r.json(); })
+    .then(function(r) {
+      if (!r.ok) return r.text().then(function(t) { throw new Error(r.status + ‘: ‘ + t); });
+      return r.json();
+    })
     .then(function(rows) {
       if (!Array.isArray(rows) || rows.length === 0) {
         feedList.innerHTML = ‘<li class="hyp-empty">No captions yet — be the first!</li>’;
@@ -412,7 +415,8 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
         return ‘<li><span class="hyp-caption">’ + row.caption + ‘</span></li>’;
       }).join(‘’);
     })
-    .catch(function() {
+    .catch(function(err) {
+      console.error(‘Hypnocaption feed error:’, err);
       feedList.innerHTML = ‘<li class="hyp-empty">Could not load captions.</li>’;
     });
   }
@@ -431,14 +435,15 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
       body: JSON.stringify({ caption: cap })
     })
     .then(function(r) {
-      if (!r.ok) throw new Error();
+      if (!r.ok) return r.text().then(function(t) { throw new Error(r.status + ‘: ‘ + t); });
       status.textContent = ‘Submitted!’;
       setTimeout(function() { status.textContent = ‘’; }, 2000);
       t1.value = ‘’; t2.value = ‘’; t3.value = ‘’;
       update();
       loadFeed();
     })
-    .catch(function() {
+    .catch(function(err) {
+      console.error(‘Hypnocaption submit error:’, err);
       status.textContent = ‘Something went wrong. Try again.’;
     })
     .finally(function() {
