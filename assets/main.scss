@@ -531,9 +531,9 @@ h1, h2, h3, h4 {
     height: auto;
     border-radius: 2px;
     box-shadow:
-      0 20px 50px rgba(0,0,0,0.8),        // deep drop shadow for depth
-      0 0 0 1px rgba(255,255,255,0.08),   // hair-thin light border
-      0 0 40px rgba(255,255,255,0.06);    // soft ambient glow
+      0 20px 50px rgba(0,0,0,0.8),
+      0 0 0 1px rgba(255,255,255,0.15),
+      0 0 40px rgba(255,255,255,0.12);
     transform: translateY(-4px);
   }
 }
@@ -570,7 +570,7 @@ h1, h2, h3, h4 {
 .home-hero-award {
   font-family: $sans-stack;
   font-size: 0.8rem;
-  color: #f0c040;
+  color: #f5e033;
   margin: 0 0 1.75rem;
   letter-spacing: 0.02em;
 }
