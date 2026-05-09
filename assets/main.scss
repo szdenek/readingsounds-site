@@ -213,6 +213,13 @@ h1, h2, h3, h4 {
     --plyr-control-spacing: 10px;
   }
 
+  // Hide bottom controls when paused and not hovered —
+  // so the poster image + burned-in captions are fully visible before play
+  .plyr--paused:not(:hover) .plyr__controls {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   // Source / credit line under each video
   .source {
     display: block;
