@@ -82,16 +82,16 @@ body {
   gap: 0.25rem;
 
   a {
-    color: #ccc;
+    color: #fff;
     font-family: $sans-stack;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     text-decoration: none;
     padding: 0.25rem 0.6rem;
     border-radius: 3px;
 
     &:hover {
       color: #fff;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.15);
     }
   }
 }
