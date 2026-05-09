@@ -629,6 +629,28 @@ h1, h2, h3, h4 {
 }
 
 // -----------------------------------------------
+// Chapter prev/next pagination
+// -----------------------------------------------
+.chapter-pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-color;
+  font-family: $sans-stack;
+  font-size: 0.95rem;
+
+  &__prev, &__next {
+    color: $link-color;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  &__next { margin-left: auto; }
+}
+
+// -----------------------------------------------
 // Footer
 // -----------------------------------------------
 .site-footer {
