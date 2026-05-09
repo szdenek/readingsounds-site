@@ -48,5 +48,12 @@
       <p>&copy; 2015 Sean Zdenek &nbsp;&middot;&nbsp; <a href="{{ '/fair-use-notice/' | relative_url }}">Fair Use Notice</a> &nbsp;&middot;&nbsp; <a href="{{ '/accessibility-statement/' | relative_url }}">Accessibility</a></p>
     </div>
   </footer>
+<script>
+  const dd = document.querySelector('.nav-dropdown');
+  if (dd) {
+    dd.addEventListener('mouseenter', () => dd.open = true);
+    dd.addEventListener('mouseleave', () => dd.open = false);
+  }
+</script>
 </body>
 </html>
