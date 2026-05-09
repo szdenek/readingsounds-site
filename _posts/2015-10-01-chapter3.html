@@ -377,7 +377,7 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
 
   function buildCaption() {
     var parts = [t1.value, t2.value, t3.value].filter(function(v) { return v; });
-    return parts.length ? '(' + parts.join(', ').toLowerCase() + ')' : null;
+    return parts.length ? '(' + parts.join(' ').toLowerCase() + ')' : null;
   }
 
   function update() {
