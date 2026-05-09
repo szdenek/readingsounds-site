@@ -517,14 +517,16 @@ h1, h2, h3, h4 {
     align-items: flex-end;
     padding: 0.75rem 1rem;
     position: relative;
+    isolation: isolate; // own stacking context so z-indexes below are reliable
 
-    // Color overlay sits between photo and badge label
+    // Layer 1 — colour overlay between photo and badge
     &::after {
       content: '';
       position: absolute;
       inset: 0;
       background-color: var(--card-color);
       opacity: 0.62;
+      z-index: 1;
     }
   }
 
@@ -539,7 +541,7 @@ h1, h2, h3, h4 {
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     position: relative;
-    z-index: 1;
+    z-index: 2; // Layer 2 — above colour overlay, unaffected by its tint
   }
 
   &__body {
