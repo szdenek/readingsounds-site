@@ -195,7 +195,7 @@ h1, h2, h3, h4 {
     max-width: 720px;
     height: auto;
     display: block;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0;
     border-radius: 4px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     background: #000;
@@ -208,10 +208,8 @@ h1, h2, h3, h4 {
     font-size: 0.8rem;
     color: #666;
     font-style: italic;
-    margin-top: 0.4rem;
+    margin-top: 0.2rem;
     margin-bottom: 2rem;
-    padding-top: 0.4rem;
-    border-top: 1px solid #e8e8e8;
     line-height: 1.5;
   }
 
