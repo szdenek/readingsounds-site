@@ -10,27 +10,98 @@ description: "A companion website for Reading Sounds: Closed-Captioned Media and
   <p class="home-hero-desc">A companion website for <em>Reading Sounds: Closed-Captioned Media and Popular Culture</em> by Sean Zdenek (University of Chicago Press, 2015).</p>
 </section>
 
-<div class="home-chapters">
-  <h2>Book chapters</h2>
-  <ul class="chapter-list">
-    <li><a href="{{ '/preface/' | relative_url }}">Preface</a></li>
-    <li><a href="{{ '/chapter1/' | relative_url }}">Chapter 1: A rhetorical view of captioning</a></li>
-    <li><a href="{{ '/chapter2/' | relative_url }}">Chapter 2: Reading and writing captions</a></li>
-    <li><a href="{{ '/chapter3/' | relative_url }}">Chapter 3: Context and subjectivity in sound effects captioning</a></li>
-    <li><a href="{{ '/chapter4/' | relative_url }}">Chapter 4: Logocentrism</a></li>
-    <li><a href="{{ '/chapter5/' | relative_url }}">Chapter 5: Captioned irony</a></li>
-    <li><a href="{{ '/chapter6/' | relative_url }}">Chapter 6: Captioned silences and ambient sounds</a></li>
-    <li><a href="{{ '/chapter7/' | relative_url }}">Chapter 7: Cultural literacy, sonic allusions, and series awareness</a></li>
-    <li><a href="{{ '/chapter8/' | relative_url }}">Chapter 8: In a manner of speaking</a></li>
-    <li><a href="{{ '/chapter9/' | relative_url }}">Chapter 9: The future of closed captioning</a></li>
-  </ul>
+<div class="home-grid-wrap">
+  <div class="home-grid">
 
-  <h2 style="margin-top: 3rem;">Recent blog posts</h2>
-  <ul class="chapter-list">
-    {% for post in site.posts limit:6 %}
-      {% unless post.slug contains 'chapter' or post.slug == 'preface' %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title | strip_html }}</a></li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
+    <a href="{{ '/preface/' | relative_url }}" class="chapter-card" style="--card-color: #2d3047;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Preface</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Before We Begin</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter1/' | relative_url }}" class="chapter-card" style="--card-color: #1a5fb4;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 1</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">A Rhetorical View of Captioning</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter2/' | relative_url }}" class="chapter-card" style="--card-color: #0d7377;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 2</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Reading and Writing Captions</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter3/' | relative_url }}" class="chapter-card" style="--card-color: #2d6a4f;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 3</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Context and Subjectivity in Sound Effects Captioning</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter4/' | relative_url }}" class="chapter-card" style="--card-color: #9b2335;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 4</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Logocentrism</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter5/' | relative_url }}" class="chapter-card" style="--card-color: #c07800;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 5</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Captioned Irony</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter6/' | relative_url }}" class="chapter-card" style="--card-color: #5a3e85;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 6</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Captioned Silences and Ambient Sounds</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter7/' | relative_url }}" class="chapter-card" style="--card-color: #6b2d8b;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 7</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">Cultural Literacy, Sonic Allusions, and Series Awareness</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter8/' | relative_url }}" class="chapter-card" style="--card-color: #1565c0;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 8</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">In a Manner of Speaking</p>
+      </div>
+    </a>
+
+    <a href="{{ '/chapter9/' | relative_url }}" class="chapter-card" style="--card-color: #7d3c27;">
+      <div class="chapter-card__visual">
+        <span class="chapter-card__num">Chapter 9</span>
+      </div>
+      <div class="chapter-card__body">
+        <p class="chapter-card__title">The Future of Closed Captioning</p>
+      </div>
+    </a>
+
+  </div>
 </div>
