@@ -427,26 +427,31 @@ h1, h2, h3, h4 {
 // Home page
 // -----------------------------------------------
 .home-hero {
-  background: #1a1a1a;
+  background: #161210;
   color: #fff;
-  padding: 3.5rem 1.5rem;
+  padding: 6rem 1.5rem 5.5rem;
   text-align: center;
 }
 
 .home-hero-title {
-  font-family: $sans-stack;
-  font-size: 2.4rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4.5rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
-  letter-spacing: -0.02em;
+  font-style: italic;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
   color: #fff;
 }
 
 .home-hero-sub {
-  font-size: 1.1rem;
-  color: #80b8ff;
-  margin: 0 0 1rem;
   font-family: $sans-stack;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #80b8ff;
+  margin: 0 0 1.5rem;
 }
 
 .home-hero-desc {
@@ -638,7 +643,8 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   body { font-size: 17px; }
 
-  .home-hero-title { font-size: 1.8rem; }
+  .home-hero { padding: 4rem 1.5rem 3.5rem; }
+  .home-hero-title { font-size: 2.8rem; }
 
   .chapter-page { padding: 1.5rem 1rem; }
 
