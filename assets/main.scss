@@ -289,7 +289,7 @@ h1, h2, h3, h4 {
 
   // Hide bottom controls when paused and not hovered —
   // so the poster image + burned-in captions are fully visible before play
-  .plyr--paused:not(:hover) .plyr__controls {
+  .plyr--paused:not(:hover):not(:focus-within) .plyr__controls {
     opacity: 0;
     pointer-events: none;
   }
