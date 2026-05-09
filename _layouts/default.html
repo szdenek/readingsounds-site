@@ -18,7 +18,21 @@
     <div class="wrapper">
       <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="{{ '/book-contents/' | relative_url }}">Contents</a>
+        <details class="nav-dropdown">
+          <summary>Contents</summary>
+          <ul class="nav-dropdown__list">
+            <li><a href="{{ '/preface/' | relative_url }}">Preface</a></li>
+            <li><a href="{{ '/chapter1/' | relative_url }}">Chapter 1</a></li>
+            <li><a href="{{ '/chapter2/' | relative_url }}">Chapter 2</a></li>
+            <li><a href="{{ '/chapter3/' | relative_url }}">Chapter 3</a></li>
+            <li><a href="{{ '/chapter4/' | relative_url }}">Chapter 4</a></li>
+            <li><a href="{{ '/chapter5/' | relative_url }}">Chapter 5</a></li>
+            <li><a href="{{ '/chapter6/' | relative_url }}">Chapter 6</a></li>
+            <li><a href="{{ '/chapter7/' | relative_url }}">Chapter 7</a></li>
+            <li><a href="{{ '/chapter8/' | relative_url }}">Chapter 8</a></li>
+            <li><a href="{{ '/chapter9/' | relative_url }}">Chapter 9</a></li>
+          </ul>
+        </details>
         <a href="https://press.uchicago.edu/ucp/books/book/chicago/R/bo21933882.html">Buy the book</a>
         <a href="{{ '/fair-use-notice/' | relative_url }}">Fair Use</a>
       </nav>
