@@ -51,8 +51,14 @@
 <script>
   const dd = document.querySelector('.nav-dropdown');
   if (dd) {
-    dd.addEventListener('mouseenter', () => dd.open = true);
-    dd.addEventListener('mouseleave', () => dd.open = false);
+    let closeTimer;
+    dd.addEventListener('mouseenter', () => {
+      clearTimeout(closeTimer);
+      dd.open = true;
+    });
+    dd.addEventListener('mouseleave', () => {
+      closeTimer = setTimeout(() => dd.open = false, 200);
+    });
   }
 </script>
 </body>
