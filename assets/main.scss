@@ -152,6 +152,23 @@ h1, h2, h3, h4 {
 }
 
 // -----------------------------------------------
+// Chapter hero image
+// -----------------------------------------------
+.chapter-hero {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// -----------------------------------------------
 // Chapter pages
 // -----------------------------------------------
 .chapter-page {
