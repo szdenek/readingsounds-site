@@ -26,6 +26,9 @@ body {
   background: #fff;
 }
 
+// Text alignment utility
+.text-center { text-align: center; }
+
 // Focus styles
 :focus-visible {
   outline: 2px solid #1a5fb4;
