@@ -309,7 +309,7 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
     <div>
       <label for="hyp-term1">First term</label>
       <select id="hyp-term1">
-        <option value="">—</option>
+        <option value="">(none)</option>
         <option>Deep</option>
         <option>Droning</option>
         <option>Eyeballs</option>
@@ -323,7 +323,7 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
     <div>
       <label for="hyp-term2">Second term</label>
       <select id="hyp-term2">
-        <option value="">—</option>
+        <option value="">(none)</option>
         <option>Buzzing</option>
         <option>Distorted</option>
         <option>Electrical</option>
@@ -337,7 +337,7 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
     <div>
       <label for="hyp-term3">Third term</label>
       <select id="hyp-term3">
-        <option value="">—</option>
+        <option value="">(none)</option>
         <option>Blaring</option>
         <option>Drone</option>
         <option>Buzzing</option>
@@ -362,11 +362,10 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
 
 <script>
 (function() {
-  // ── Supabase config ──────────────────────────────────────────────
+  // Supabase config
   var SUPABASE_URL = ‘https://iovkdnrdtmgwxmbezkqo.supabase.co’;
   var SUPABASE_KEY = ‘sb_publishable_roSvSbkykww-KGyOcPU4NA_12qcYkp0’;
   var TABLE = ‘hypnocaptions’;
-  // ────────────────────────────────────────────────────────────────
 
   var t1 = document.getElementById(‘hyp-term1’);
   var t2 = document.getElementById(‘hyp-term2’);
@@ -383,7 +382,7 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
 
   function update() {
     var cap = buildCaption();
-    preview.textContent = cap || ‘(—)’;
+    preview.textContent = cap || ‘(...)’;
   }
 
   t1.addEventListener(‘change’, update);
@@ -408,7 +407,7 @@ Describing a sound as “loud” is always a popular option, but “loud” can 
     })
     .then(function(rows) {
       if (!Array.isArray(rows) || rows.length === 0) {
-        feedList.innerHTML = ‘<li class="hyp-empty">No captions yet — be the first!</li>’;
+        feedList.innerHTML = ‘<li class="hyp-empty">No captions yet - be the first!</li>’;
         return;
       }
       feedList.innerHTML = rows.map(function(row) {
