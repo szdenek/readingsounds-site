@@ -563,15 +563,25 @@ h1, h2, h3, h4 {
   }
 
   &__visual {
-    background-color: var(--card-color);
+    background-color: #000; // fallback behind image
     background-image: var(--card-image, none);
     background-size: cover;
     background-position: center;
-    background-blend-mode: multiply; // tints photo with card colour — no pseudo-element needed
     height: 140px;
     display: flex;
     align-items: flex-end;
     padding: 0.75rem 1rem;
+    position: relative;
+
+    // colour-tint overlay — sits between photo and badge
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--card-color);
+      opacity: 0.5;
+      z-index: 0;
+    }
   }
 
   &__num {
@@ -584,6 +594,8 @@ h1, h2, h3, h4 {
     background: rgba(0,0,0,0.6);
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
+    position: relative; // required for z-index to take effect
+    z-index: 1;         // above the ::after colour overlay
   }
 
   &__body {
