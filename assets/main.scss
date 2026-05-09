@@ -201,6 +201,20 @@ h1, h2, h3, h4 {
     background: #000;
   }
 
+  // Source / credit line under each video
+  .source {
+    display: block;
+    font-family: $sans-stack;
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid #e8e8e8;
+    line-height: 1.5;
+  }
+
   // Figure anchors — subtle highlight for anchor targets
   :target {
     scroll-margin-top: 80px;
@@ -222,6 +236,31 @@ h1, h2, h3, h4 {
     padding: 0.5rem 1.5rem;
     color: #555;
   }
+}
+
+// -----------------------------------------------
+// Chapter intro callout + book CTA
+// -----------------------------------------------
+.chapter-intro {
+  background: #f0f5ff;
+  border-left: 4px solid $link-color;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.book-cta {
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  background: #f9f9f9;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  font-family: $sans-stack;
+  font-size: 0.95rem;
+
+  p { margin: 0; }
 }
 
 // -----------------------------------------------
