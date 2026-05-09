@@ -176,7 +176,7 @@ h1, h2, h3, h4 {
 .chapter-content {
   h2 {
     font-size: 1.35rem;
-    margin: 2.5rem 0 0.75rem;
+    margin: 2.5rem 0 0.75rem -1rem;
     color: #333;
     border-bottom: 1px solid #eee;
     padding-bottom: 0.4rem;
@@ -184,7 +184,7 @@ h1, h2, h3, h4 {
 
   h3 {
     font-size: 1.25rem;
-    margin: 1.75rem 0 0.5rem;
+    margin: 1.75rem 0 0.5rem -0.5rem;
   }
 
   p { margin: 0 0 1.2rem; }
