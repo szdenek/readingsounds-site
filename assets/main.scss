@@ -725,6 +725,52 @@ h1, h2, h3, h4 {
 }
 
 // -----------------------------------------------
+// Praise section (home page)
+// -----------------------------------------------
+.home-praise {
+  background: #f5f5f5;
+  padding: 4rem 1.5rem;
+
+  &__inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-family: $sans-stack;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #555;
+    margin: 0 0 2.5rem;
+    text-align: center;
+  }
+
+  &__quote {
+    border-left: 3px solid $link-color;
+    margin: 0 0 2rem;
+    padding: 0.5rem 1.5rem;
+
+    p {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #222;
+      margin: 0 0 0.5rem;
+      font-style: italic;
+    }
+
+    footer {
+      font-family: $sans-stack;
+      font-size: 0.85rem;
+      color: #666;
+      font-style: normal;
+    }
+  }
+}
+
+// -----------------------------------------------
 // Footer
 // -----------------------------------------------
 .site-footer {
