@@ -12,7 +12,7 @@ $text-color: #222;
 $link-color: #1a5fb4;
 $light-bg: #f8f8f8;
 $border-color: #ddd;
-$max-width: 900px;
+$max-width: 760px;
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -159,7 +159,7 @@ h1, h2, h3, h4 {
 }
 
 .chapter-title {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 0 0 0.5rem;
   border-bottom: 2px solid #1a1a1a;
   padding-bottom: 0.5rem;
@@ -175,7 +175,7 @@ h1, h2, h3, h4 {
 
 .chapter-content {
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     margin: 2.5rem 0 0.75rem;
     color: #333;
     border-bottom: 1px solid #eee;
@@ -183,7 +183,7 @@ h1, h2, h3, h4 {
   }
 
   h3 {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     margin: 1.75rem 0 0.5rem;
   }
 
