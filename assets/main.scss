@@ -368,6 +368,16 @@ h1, h2, h3, h4 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+
+    li:first-child {
+      flex-basis: 100%;
+      margin-bottom: 0.5rem;
+
+      .hyp-caption {
+        font-size: 1.15rem;
+        padding: 0.25rem 0.8rem;
+      }
+    }
   }
 
   .hyp-caption {
