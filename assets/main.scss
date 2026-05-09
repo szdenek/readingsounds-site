@@ -6,7 +6,7 @@
 // -----------------------------------------------
 
 // Base
-$font-stack: 'Georgia', 'Times New Roman', serif;
+$font-stack: system-ui, -apple-system, sans-serif;
 $sans-stack: system-ui, -apple-system, sans-serif;
 $text-color: #222;
 $link-color: #1a5fb4;
@@ -18,7 +18,7 @@ $max-width: 760px;
 
 body {
   font-family: $font-stack;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.7;
   color: $text-color;
   margin: 0;
