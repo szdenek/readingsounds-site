@@ -24,6 +24,13 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
 }
 
 // Text alignment utility
@@ -162,10 +169,7 @@ body {
   }
 }
 
-// Main content
-.page-content {
-  min-height: 60vh;
-}
+// Main content — flex: 1 is set on body to push footer to bottom
 
 // Links
 a {
