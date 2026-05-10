@@ -5,6 +5,7 @@ email: seanzdenek@gmail.com
 url: "https://readingsounds.net"
 baseurl: ""
 author: Sean Zdenek
+image: /assets/images/og-image.jpg
 
 # Build settings — no theme, fully custom layouts
 plugins:
