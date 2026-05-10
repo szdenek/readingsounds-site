@@ -98,8 +98,16 @@ body {
   font-weight: 700;
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 
   &:hover { color: #80b8ff; }
+}
+
+.site-logo {
+  display: block;
+  flex-shrink: 0;
 }
 
 .site-nav {
