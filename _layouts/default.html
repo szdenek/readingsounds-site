@@ -48,7 +48,7 @@
   </footer>
 <script>
   const dd = document.querySelector('.nav-dropdown');
-  if (dd) {
+  if (dd && window.matchMedia('(hover: hover)').matches) {
     let closeTimer;
     dd.addEventListener('mouseenter', () => {
       clearTimeout(closeTimer);
