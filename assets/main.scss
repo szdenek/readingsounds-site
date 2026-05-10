@@ -185,21 +185,24 @@ body {
     z-index: 99;
     border-top: 1px solid rgba(255,255,255,0.12);
 
-    a, .search-toggle {
-      padding: 0.7rem 1.5rem;
-      border-radius: 0;
-      font-size: 1rem;
-      white-space: nowrap;
-      text-align: left;
-    }
   }
 
   .nav-trigger:checked ~ .nav-items {
     display: flex;
   }
 
-  // Contents dropdown goes flat on mobile
-  .nav-dropdown {
+  // Higher specificity beats .site-nav a and .nav-dropdown summary
+  // rules that appear later in the file
+  .site-nav .nav-items > a,
+  .site-nav .nav-items > .search-toggle {
+    padding: 0.7rem 1.5rem;
+    border-radius: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .site-nav .nav-dropdown {
     summary {
       padding: 0.7rem 1.5rem;
       border-radius: 0;
