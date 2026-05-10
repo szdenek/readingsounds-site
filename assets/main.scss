@@ -170,19 +170,27 @@ body {
     align-items: center;
   }
 
+  // Drop down from the full header width, not just the nav element
   .nav-items {
     display: none;
-    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 0;
+    align-items: stretch;
+    padding: 0.5rem 0 1rem;
     gap: 0;
+    z-index: 99;
+    border-top: 1px solid rgba(255,255,255,0.12);
 
     a, .search-toggle {
-      width: 100%;
-      padding: 0.6rem 1.5rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 0;
       font-size: 1rem;
+      white-space: nowrap;
+      text-align: left;
     }
   }
 
@@ -192,12 +200,10 @@ body {
 
   // Contents dropdown goes flat on mobile
   .nav-dropdown {
-    width: 100%;
-
     summary {
-      width: 100%;
-      padding: 0.6rem 1.5rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 0;
+      white-space: nowrap;
     }
 
     &__list {
@@ -210,6 +216,7 @@ body {
 
       li a {
         padding: 0.5rem 2.5rem;
+        white-space: nowrap;
       }
     }
   }
