@@ -124,6 +124,10 @@ body {
   flex-shrink: 0;
 }
 
+.site-title:hover .site-logo {
+  content: url('/assets/images/favicon-32x32-hover.png');
+}
+
 .nav-trigger {
   display: none;
 }
