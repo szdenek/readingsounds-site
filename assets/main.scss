@@ -122,11 +122,6 @@ body {
 .site-logo {
   display: block;
   flex-shrink: 0;
-  .logo-cc { fill: white; transition: fill 0.15s ease; }
-}
-
-.site-title:hover .site-logo .logo-cc {
-  fill: #80b8ff !important;
 }
 
 .nav-trigger {
