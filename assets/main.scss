@@ -122,6 +122,11 @@ body {
 .site-logo {
   display: block;
   flex-shrink: 0;
+  transition: filter 0.15s ease;
+}
+
+.site-title:hover .site-logo {
+  filter: sepia(1) hue-rotate(185deg) saturate(5) brightness(1.2);
 }
 
 .nav-trigger {
