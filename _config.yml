@@ -24,6 +24,7 @@ collections:
 
 include:
   - _pages
+  - .well-known
 
 exclude:
   - Gemfile
