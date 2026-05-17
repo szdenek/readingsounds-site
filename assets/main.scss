@@ -115,6 +115,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  transition: color 0.15s ease;
 
   &:hover { color: #80b8ff; }
 }
