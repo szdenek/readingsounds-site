@@ -1084,6 +1084,13 @@ h1, h2, h3, h4 {
   &:hover { opacity: 0.85; transform: scale(1.1); text-decoration: none; color: #fff; }
 }
 
+.home-share {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 .post-share-bluesky  { background: #0085ff; &:visited { background: #0085ff; } }
 .post-share-facebook { background: #1877f2; &:visited { background: #1877f2; } }
 .post-share-twitter  { background: #000;    &:visited { background: #000; } }
