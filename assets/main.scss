@@ -1089,6 +1089,20 @@ h1, h2, h3, h4 {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+
+  .post-share-label { color: #fff; }
+
+  .post-share-twitter,
+  .post-share-twitter:visited {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  .post-share-twitter:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
 }
 
 .post-share-bluesky  { background: #0085ff; &:visited { background: #0085ff; } }
