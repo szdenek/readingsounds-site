@@ -24,6 +24,65 @@ layout: default
   </nav>
 </div>
 
+<script>
+  // VideoObject structured data for Google video indexing.
+  // Runs before Plyr so original src/poster attributes are intact.
+  (function() {
+    var videos = document.querySelectorAll('.chapter-content video');
+    if (!videos.length) return;
+
+    var uploadDate = '{{ page.date | date: "%Y-%m-%dT00:00:00+00:00" }}';
+    var pageDesc   = {{ page.description | jsonify }};
+    var pageTitle  = {{ page.title | jsonify }};
+    var schemas    = [];
+
+    Array.prototype.forEach.call(videos, function(video) {
+      // Content URL: prefer src attribute, fall back to first <source>
+      var src = video.getAttribute('src');
+      if (!src) {
+        var s = video.querySelector('source');
+        if (s) src = s.getAttribute('src');
+      }
+      if (!src) return;
+
+      // Thumbnail is required by Google
+      var poster = video.getAttribute('poster');
+      if (!poster) return;
+
+      // Ensure absolute URLs
+      var base = 'https://readingsounds.net';
+      if (src.indexOf('//') === 0)    src    = 'https:' + src;
+      if (src.charAt(0) === '/')      src    = base + src;
+      if (poster.indexOf('//') === 0) poster = 'https:' + poster;
+      if (poster.charAt(0) === '/')   poster = base + poster;
+
+      // Walk backward through element siblings to find nearest heading
+      var title = pageTitle;
+      var el = video.previousElementSibling;
+      while (el) {
+        if (/^H[1-6]$/.test(el.tagName)) { title = el.textContent.trim(); break; }
+        el = el.previousElementSibling;
+      }
+
+      schemas.push({
+        '@type':        'VideoObject',
+        'name':         title,
+        'description':  pageDesc,
+        'thumbnailUrl': poster,
+        'uploadDate':   uploadDate,
+        'contentUrl':   src
+      });
+    });
+
+    if (!schemas.length) return;
+
+    var ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': schemas });
+    document.head.appendChild(ld);
+  })();
+</script>
+
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 <script>
   Plyr.setup('.chapter-content video', {
