@@ -615,6 +615,35 @@ h1, h2, h3, h4 {
   }
 }
 
+.hyp-result-box {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: #f0f0f0;
+  border-left: 3px solid $link-color;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-family: $sans-stack;
+
+  .hyp-result-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  #hyp-result-text {
+    display: inline-block;
+    background: #c0c0c0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-size: 1.1rem;
+  }
+}
+
 .hypnocaption-feed {
   margin: 2rem 0;
   font-family: $sans-stack;
