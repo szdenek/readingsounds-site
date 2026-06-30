@@ -465,6 +465,7 @@ h1, h2, h3, h4 {
 
     li.chapter-toc-h3 {
       list-style: none;
+      counter-increment: list-item 0;
       padding-left: 1rem;
       position: relative;
 
