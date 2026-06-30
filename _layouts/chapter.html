@@ -130,7 +130,7 @@ layout: default
       if (h.tagName === 'H3') li.className = 'chapter-toc-h3';
       var a = document.createElement('a');
       a.href = '#' + h.id;
-      a.textContent = h.textContent.trim();
+      a.textContent = h.textContent.trim().replace(/^\d+\.\s*/, '');
       li.appendChild(a);
       ol.appendChild(li);
     });
