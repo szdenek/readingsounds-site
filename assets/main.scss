@@ -430,6 +430,54 @@ h1, h2, h3, h4 {
   padding-bottom: 0.5rem;
 }
 
+.chapter-toc {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  background: $light-bg;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  font-family: $sans-stack;
+
+  .chapter-toc-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #696969;
+    margin: 0 0 0.6rem;
+  }
+
+  .chapter-toc-list {
+    margin: 0;
+    padding-left: 1.4rem;
+
+    li {
+      margin: 0.3rem 0;
+      font-size: 0.875rem;
+      line-height: 1.4;
+
+      a {
+        color: $link-color;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+      }
+    }
+
+    li.chapter-toc-h3 {
+      list-style: none;
+      padding-left: 1rem;
+      position: relative;
+
+      &::before {
+        content: '–';
+        position: absolute;
+        left: 0;
+        color: #aaa;
+      }
+    }
+  }
+}
+
 .chapter-nav {
   font-family: $sans-stack;
   font-size: 0.9rem;

@@ -107,4 +107,37 @@ layout: default
       '<a class="post-share-link post-share-email" href="mailto:?subject=' + title + '&body=' + url + '" aria-label="Share by email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>';
     intro.after(bar);
   })();
+
+  // Inject TOC after share bar
+  (function() {
+    var headings = document.querySelectorAll('.chapter-content h2[id], .chapter-content h3[id]');
+    if (headings.length < 2) return;
+
+    var nav = document.createElement('nav');
+    nav.className = 'chapter-toc';
+    nav.setAttribute('aria-label', 'Page contents');
+
+    var title = document.createElement('p');
+    title.className = 'chapter-toc-title';
+    title.textContent = 'On this page';
+    nav.appendChild(title);
+
+    var ol = document.createElement('ol');
+    ol.className = 'chapter-toc-list';
+
+    Array.prototype.forEach.call(headings, function(h) {
+      var li = document.createElement('li');
+      if (h.tagName === 'H3') li.className = 'chapter-toc-h3';
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent.trim();
+      li.appendChild(a);
+      ol.appendChild(li);
+    });
+
+    nav.appendChild(ol);
+
+    var bar = document.querySelector('.post-share');
+    if (bar) bar.after(nav);
+  })();
 </script>
